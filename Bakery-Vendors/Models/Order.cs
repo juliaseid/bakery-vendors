@@ -13,8 +13,8 @@ namespace BakeryVendors.Models
     {
       Day = day;
       InvoiceTotal = invoiceTotal;
-      _instances.Add(this);
       Id = _instances.Count;
+      _instances.Add(this);
     }
 
     public static List<Order> GetAll()
