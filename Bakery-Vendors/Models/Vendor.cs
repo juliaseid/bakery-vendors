@@ -22,21 +22,11 @@ namespace BakeryVendors.Models
       AllOrders = new List<Order>{};
     }
 
-    public Vendor(string businessName, string phoneNumber, string contactName)
+    public Vendor(string businessName, string phoneNumber, string contactName, string businessType, string email)
     :this(businessName, phoneNumber)
     {
       Contact = contactName;
-    }
-
-    public Vendor(string businessName, string phoneNumber, string contactName, string businessType)
-    :this(businessName, phoneNumber, contactName)
-    {
       BusinessType = businessType;
-    }
-
-    public Vendor(string businessName, string phoneNumber, string contactName, string businessType, string email)
-    :this(businessName, phoneNumber, contactName, businessType)
-    {
       Email = email;
     }
 

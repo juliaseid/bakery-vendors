@@ -5,19 +5,25 @@
 
 <div class ="container">
 
-  <h2>Add an Artist</h2>
+  <h2>Add a New Vendor</h2>
   <div class = "well">
-    <p>Add an artist here: </p>
+    <p>Add a vendor here: </p>
 
-    <form action="/artists" method=post>
-    <label for="firstName" > Enter Band Name or First Name of Artist </label>
-      <input type="text" name="firstName" required>
-      <label for="lastName" > Enter Last Name of the Artist: </label>
-      <input type="text" name="lastName" placeholder="Optional">
-      <button type="submit">Add New Artist</button>
+    <form action="/vendors" method=post>
+      <label for="vendorName" > Enter the Business Name </label>
+      <input type="text" name="vendorName" required>
+      <label for="vendorPhone"> Enter a Phone Number </label>
+      <input type="number" name="vendorPhone" required>
+      <label for="contactName" > Enter A Contact Name: </label>
+      <input type="text" name="contactName" placeholder="Optional">
+      <label for="businessType"> What Type of Business? </label>
+      <input type="text" name="businessType" placeholder="Optional">
+      <label for="email"> Enter an Email Address: </label>
+      <input type="email" name="email" placeholder="Optional">
+      <button type="submit">Add New Vendor</button>
     </form>
   </div>
 <p><a href="/">Back Home</a></p>
-<p><a href="/artists">Back to artists</a></p>
+<p><a href="/vendors">Back to Vendors</a></p>
 
 </div>
