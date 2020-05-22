@@ -7,12 +7,15 @@ namespace BakeryVendors.Models
     public string Day { get; set; }
     public int InvoiceTotal { get; set; }
     public int Id { get; }
+    public int Bread { get; set; } 
+    public int Pastry { get; set; }
     private static List<Order> _instances = new List<Order> {};
     
-    public Order(string day, int invoiceTotal)
+    public Order(string day, int bread, int pastry)
     {
       Day = day;
-      InvoiceTotal = invoiceTotal;
+      Bread = bread;
+      Pastry = pastry;
       _instances.Add(this);
       Id = _instances.Count;
     }
@@ -30,6 +33,11 @@ namespace BakeryVendors.Models
     public static Order Find(int searchId)
     {
       return _instances[searchId-1];
+    }
+
+    public int Invoice()
+    {
+      return 0;
     }
 
   }

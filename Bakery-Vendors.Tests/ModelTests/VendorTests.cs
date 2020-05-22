@@ -124,8 +124,9 @@ namespace BakeryVendors.Tests
       string phone01 = "4255551234";
       Vendor newVendor1 = new Vendor(name01, phone01);
       string day = "Tuesday";
-      int invoice = 60;
-      Order newOrder = new Order(day, invoice);
+      int bread = 60;
+      int pastry = 50;
+      Order newOrder = new Order(day, bread, pastry);
       List<Order> newList = new List<Order> { newOrder };
       newVendor1.AddOrder(newOrder);
 
