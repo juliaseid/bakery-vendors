@@ -28,6 +28,8 @@ namespace BakeryVendors.Models
       Contact = contactName;
       BusinessType = businessType;
       Email = email;
+      Id = _instances.Count;
+      AllOrders = new List<Order>{};
     }
 
     public static void ClearAll()
