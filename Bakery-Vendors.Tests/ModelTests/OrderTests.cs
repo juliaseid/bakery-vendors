@@ -125,8 +125,24 @@ namespace BakeryVendors.Tests
       Order newOrder = new Order(day, bread, pastry);
       //Act
       int result = 20;
+      int order = newOrder.Invoice();
       //Assert
-      Assert.AreEqual(newOrder.Invoice(), result);
+      Assert.AreEqual(order, result);
+    }
+
+    [TestMethod]
+    public void Invoice_ReturnsCorrectTotalForPastry_Int()
+    {
+      //arrange
+      string day = "Tuesday";
+      int bread = 0;
+      int pastry = 5;
+      Order newOrder = new Order(day, bread, pastry);
+      //Act
+      int result = 9;
+      int order = newOrder.Invoice();
+      //Assert
+      Assert.AreEqual(order, result);
     }
 
 

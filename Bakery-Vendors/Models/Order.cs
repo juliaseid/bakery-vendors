@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace BakeryVendors.Models
@@ -37,7 +38,10 @@ namespace BakeryVendors.Models
 
     public int Invoice()
     {
-      return 0;
+      int breadTotal = (Bread - (Bread/3)) * 5;
+      int pastryTotal = 0;
+      InvoiceTotal = breadTotal + pastryTotal;
+      return InvoiceTotal;
     }
 
   }
