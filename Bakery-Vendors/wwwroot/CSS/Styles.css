@@ -1,0 +1,18 @@
+body {
+  width: 800px;
+  background-color: lavenderblush;
+}
+
+h2 {
+  color: darkslateblue;
+}
+
+h3 {
+  color: darkslateblue;
+}
+
+p {
+  font-stretch: extra-expanded;
+  color: indigo;
+  font-weight: bolder;
+}
