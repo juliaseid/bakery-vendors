@@ -125,7 +125,7 @@ namespace BakeryVendors.Tests
       Order newOrder = new Order(day, bread, pastry);
       //Act
       int result = 20;
-      int order = newOrder.Invoice();
+      int order = newOrder.InvoiceTotal;
       //Assert
       Assert.AreEqual(order, result);
     }
@@ -140,7 +140,7 @@ namespace BakeryVendors.Tests
       Order newOrder = new Order(day, bread, pastry);
       //Act
       int result = 9;
-      int order = newOrder.Invoice();
+      int order = newOrder.InvoiceTotal;
       //Assert
       Assert.AreEqual(order, result);
     }

@@ -17,6 +17,7 @@ namespace BakeryVendors.Models
       Day = day;
       Bread = bread;
       Pastry = pastry;
+      InvoiceTotal = ((Bread - (Bread/3)) * 5) + ((Pastry * 2) - (Pastry/3));
       _instances.Add(this);
       Id = _instances.Count;
     }
@@ -34,14 +35,6 @@ namespace BakeryVendors.Models
     public static Order Find(int searchId)
     {
       return _instances[searchId-1];
-    }
-
-    public int Invoice()
-    {
-      int breadTotal = (Bread - (Bread/3)) * 5;
-      int pastryTotal = (Pastry * 2) - (Pastry/3);
-      InvoiceTotal = breadTotal + pastryTotal;
-      return InvoiceTotal;
     }
 
   }

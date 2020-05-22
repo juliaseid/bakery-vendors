@@ -51,7 +51,6 @@ namespace BakeryVendors.Controllers
       return View("Show", model);
     }
 
-
   }
 
 }
