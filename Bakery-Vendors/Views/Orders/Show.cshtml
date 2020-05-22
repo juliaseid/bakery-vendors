@@ -9,10 +9,10 @@
       <h3>No orders have been added yet!</h3>
     }
     <h3>Vendor: @Model["vendor"].Name</h3>
-    <h3>@Model["order"].Day</h3>
+    <h3>Order Day: @Model["order"].Day</h3>
+    <h4>Contact: @Model["vendor"].Contact</h4>
     <h4>Business Type: @Model["vendor"].BusinessType</h4>
     <h3>Phone: @Model["vendor"].PhoneNumber</h3>
-    <h4>Contact: @Model["vendor"].Contact</h4>
     <h4>Email: @Model["vendor"].Email</h4>
     
     <h4>Loaves of Bread: @Model["order"].Bread</h4>
@@ -20,6 +20,6 @@
 
     <h3>Invoice Total: $@Model["order"].InvoiceTotal</h3>
   </div>
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add A New Order</a>
+<a href='/vendors/@Model["vendor"].Id/orders/new'>Add A New Order</a><br>
 <a href = '/vendors'>View all Vendors</a>
 </div>

@@ -8,12 +8,12 @@
     <form action="/vendors/@Model.Id/orders"  method="post" >
       <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
       <label for="orderDay" > Enter the Day for the Order  </label>
-      <input type="text" name="orderDay" id="orderDay" required>
+      <input type="text" name="orderDay" id="orderDay" required><br>
       <label for="bread"> Enter the number of loaves of bread: </label>
-      <input type="number" name="bread" id="bread" required>
+      <input type="number" name="bread" id="bread" required><br>
       <label for="pastry"> Enter the total number of pastries: </label>
-      <input type="number" name="pastry" id="pastry" required>
-      <button type="submit"> Submit </button>
+      <input type="number" name="pastry" id="pastry" required><br>
+      <button type="submit" class="btn-btnprimary"> Submit </button>
     </form> 
   </div>
 </div>
