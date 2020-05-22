@@ -8,17 +8,36 @@ namespace BakeryVendors.Models
     public string Name { get; set; }
     public string Contact { get; set; }
     public string BusinessType { get; set; }
+    public string PhoneNumber { get; set; }
+    public string Email { get; set; }
     public int Id { get; }
     public List<Order> AllOrders { get; set; }
 
-    public Vendor(string businessName, string contactName, string businessType)
+    public Vendor(string businessName, string phoneNumber)
     {
       Name = businessName;
-      Contact = contactName;
-      BusinessType = businessType;
+      PhoneNumber = phoneNumber;
       _instances.Add(this);
       Id = _instances.Count;
       AllOrders = new List<Order>{};
+    }
+
+    public Vendor(string businessName, string phoneNumber, string contactName)
+    :this(businessName, phoneNumber)
+    {
+      Contact = contactName;
+    }
+
+    public Vendor(string businessName, string phoneNumber, string contactName, string businessType)
+    :this(businessName, phoneNumber, contactName)
+    {
+      BusinessType = businessType;
+    }
+
+    public Vendor(string businessName, string phoneNumber, string contactName, string businessType, string email)
+    :this(businessName, phoneNumber, contactName, businessType)
+    {
+      Email = email;
     }
 
     public static void ClearAll()

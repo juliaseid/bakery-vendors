@@ -17,7 +17,7 @@ namespace BakeryVendors.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("Jo's Market", "JoJo", "retail");
+      Vendor newVendor = new Vendor("Jo's Market", "425-555-1234");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
@@ -26,7 +26,7 @@ namespace BakeryVendors.Tests
     {
       //Arrange
       string businessName = "Jo's Test Market";
-      Vendor newVendor = new Vendor(businessName, "JoJo", "retail");
+      Vendor newVendor = new Vendor(businessName, "425-555-1234");
 
       //Act
       string result = newVendor.Name;
@@ -36,32 +36,32 @@ namespace BakeryVendors.Tests
     }
 
     [TestMethod]
-    public void GetContact_ReturnsContactName_String()
+    public void GetPhone_ReturnsPhoneNumber_String()
     {
       //Arrange
-      string contactName = "JoJo";
-      Vendor newVendor = new Vendor("Jo's Test Market", contactName, "retail");
+      string phoneNumber= "425-555-1234";
+      Vendor newVendor = new Vendor("Jo's Test Market", phoneNumber);
 
       //Act
-      string result = newVendor.Contact;
+      string result = newVendor.PhoneNumber;
 
       //Assert
-      Assert.AreEqual(contactName, result);
+      Assert.AreEqual(phoneNumber, result);
     }
 
-    [TestMethod]
-    public void GetBusiness_ReturnsBusinessType_String()
-    {
-      //Arrange
-      string businessType = "retail";
-      Vendor newVendor = new Vendor("Jo's Test Market", "JoJo", businessType);
+    // [TestMethod]
+    // public void GetBusiness_ReturnsBusinessType_String()
+    // {
+    //   //Arrange
+    //   string businessType = "retail";
+    //   Vendor newVendor = new Vendor("Jo's Test Market", "JoJo", businessType);
 
-      //Act
-      string result = newVendor.BusinessType;
+    //   //Act
+    //   string result = newVendor.BusinessType;
 
-      //Assert
-      Assert.AreEqual(businessType, result);
-    }
+    //   //Assert
+    //   Assert.AreEqual(businessType, result);
+    // }
 
 
     [TestMethod]
@@ -69,9 +69,8 @@ namespace BakeryVendors.Tests
     {
       //Arrange
       string name = "Jo's Test Market";
-      string contact = "JoJo";
-      string business = "retail";
-      Vendor newVendor = new Vendor(name, contact, business);
+      string phone = "4255551234";
+      Vendor newVendor = new Vendor(name, phone);
 
       //Act
       int result = newVendor.Id;
@@ -86,12 +85,10 @@ namespace BakeryVendors.Tests
       //Arrange
       string name01 = "Jo's Test Market";
       string name02 = "Sam's Sampler";
-      string contact01 = "JoJo";
-      string contact02 = "Sam";
-      string business01 = "retail";
-      string business02 = "cafe";
-      Vendor newVendor1 = new Vendor(name01, contact01, business01);
-      Vendor newVendor2 = new Vendor(name02, contact02, business02);
+      string phone01 = "4255551234";
+      string phone02 = "3605554321";
+      Vendor newVendor1 = new Vendor(name01, phone01);
+      Vendor newVendor2 = new Vendor(name02, phone02);
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
       //Act
@@ -106,13 +103,11 @@ namespace BakeryVendors.Tests
     {
       //Arrange
       string name01 = "Jo's Test Market";
-      string name02 = "Sam's Spot";
-      string contact01 = "JoJo";
-      string contact02 = "Sam";
-      string business01 = "retail";
-      string business02 = "cafe";
-      Vendor newVendor1 = new Vendor(name01, contact01, business01);
-      Vendor newVendor2 = new Vendor(name02, contact02, business02);
+      string name02 = "Sam's Sampler";
+      string phone01 = "4255551234";
+      string phone02 = "3605554321";
+      Vendor newVendor1 = new Vendor(name01, phone01);
+      Vendor newVendor2 = new Vendor(name02, phone02);
 
       //Act
       Vendor result = Vendor.Find(2);
@@ -126,9 +121,8 @@ namespace BakeryVendors.Tests
     {
       //Arrange
       string name01 = "Jo's Test Market";
-      string contact01 = "JoJo";
-      string business01 = "retail";
-      Vendor newVendor1 = new Vendor(name01, contact01, business01);
+      string phone01 = "4255551234";
+      Vendor newVendor1 = new Vendor(name01, phone01);
       string day = "Tuesday";
       int invoice = 60;
       Order newOrder = new Order(day, invoice);
