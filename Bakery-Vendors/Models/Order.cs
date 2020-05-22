@@ -39,7 +39,7 @@ namespace BakeryVendors.Models
     public int Invoice()
     {
       int breadTotal = (Bread - (Bread/3)) * 5;
-      int pastryTotal = 0;
+      int pastryTotal = (Pastry * 2) - (Pastry/3);
       InvoiceTotal = breadTotal + pastryTotal;
       return InvoiceTotal;
     }
